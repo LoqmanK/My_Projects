@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Mission 2</title>
+    <link href="assets/css/mission2.css" rel="stylesheet">
+    <link rel="icon" href="/assets/images/iconeUP.png">
+</head>
+<body>
+<header>
+    <nav>
+        <ul class="navbar-list">
+            <li> <a href="index.html">Accueil</a></li>
+            <li> <a href="mission1.html">Mission 1</a></li>
+            <li> <a href="mission2.html">Mission 2</a></li>
+            <li> <a href="mission3.html">Mission 3</a></li>
+            <li> <a href="conclusion.html">Conclusion</a></li>
+        </ul>
+    </nav>
+</header>
+<main>
+    <h1>Mission 2 : Conception – Interrogation d'une base de données</h1>
+    <section class="introduction">
+        <h2>Contexte :</h2>
+        <p>Dans le cadre de notre analyse de la base de données de KDou, la <strong>deuxième</strong> mission consiste à <strong>étudier les données</strong>
+            tout en répondant à une série de requêtes qui portent sur les comportements et habitudes des clients.</p>
+        <p>Il est important de rester <strong>vigilants</strong>, car des erreurs dans les données pourraient passer inaperçues.</p>
+    </section>
+
+    <section class="requete-1">
+        <h2>Indicateur n°1:</h2>
+        <p> <strong>Enoncé</strong>: <em>Est-ce qu’il y a dans la clientèle des clients qui n’ont pas encore passé de commande ?</em> </p>
+        <p> Ici nous avons la liste de clients qui n’ont pas encore passé de commandes, c’est très intéressant pour Kdou qui
+            va pouvoir avec cet indicateur offrir par exemple <strong>une réduction</strong> pour pousser le client à commander. </p>
+        <p>    Les clients  qui n’ont toujours pas passé commande sont <strong>Maël Sporto</strong> et <strong>Julie Kas.</strong> </p>
+        <figure>
+            <figcaption> Résultat : </figcaption>
+            <img src="assets/images/result_indic1.png" alt="Image du resultat de la requête" height="150" width="250">
+        </figure>
+        <figure>
+            <figcaption>Code SQL généré : </figcaption>
+            <img src="assets/images/sql_indic1.png" alt="Image du code SQL généré" height="100" width="500">
+        </figure>
+    </section>
+
+
+    <section class="requete-2">
+        <h2>Indicateur n°2:</h2>
+        <p> <strong>Enoncé</strong>: <em>Dans quelles villes la clientèle est-elle la plus importante ?  Citer les 3 premières.</em> </p>
+        <p>Nous remarquons que les villes avec la clientèle la plus importante sont : </p>
+        <ul class="list">
+            <li>Agen</li>
+            <li>Paris</li>
+            <li>Nantes</li>
+            <li>Lille</li>
+        </ul>
+        <p>Nous citons les 4 premières car elles ont le <strong>même nombre de clients</strong> par ville. C’est un <strong>très bon</strong> indicateur car il permet de
+            voir à Kdou de voir les zones les plus importantes en termes de demande théorique et permet des stocks mieux
+            répartis (proche des villes à forte demande)</p>
+        <figure>
+            <figcaption>Résultat : </figcaption>
+            <img src="assets/images/result_indic2.png" alt="Image du resultat de la requête" height="300" width="450">
+        </figure>
+        <figure>
+            <figcaption>Code SQL généré : </figcaption>
+            <img src="assets/images/sql_indic2.png" alt="Image du code SQL généré" height="100" width="400">
+        </figure>
+    </section>
+
+    <section class="requete-3">
+    <h2>Indicateur n°3:</h2>
+        <p> <strong>Enoncé</strong>: <em> Quels sont les produits conditionnés dans du carton ou dans du verre ?</em> </p>
+        <p>Cet indicateur est très pertinent car il permet <strong>d'optimiser la logistique</strong> (transport des produits) en fonction
+            des types d'emballages, de mieux répondre aux préférences des clients et d'orienter les choix vers des options
+            plus écologiques, en privilégiant par exemple le verre ou le carton, qui sont d’ailleurs ici demandés pour
+        réduire l'usage du plastique.
+            <p>Vous trouverez ci-dessous la liste de tous les produits conditionnés avec du <strong>carton</strong> ou du <strong>verre</strong>.</p>
+        <figure>
+            <figcaption>Résultat : </figcaption>
+            <img src="assets/images/result_indic3.png" alt="Image du resultat de la requête" height="400" width="600">
+        </figure>
+        <figure>
+            <figcaption>Code SQL généré : </figcaption>
+            <img src="assets/images/sql_indic3.png" alt="Image du code SQL généré" height="70" width="600">
+        </figure>
+    </section>
+
+    <section class="requete-4">
+        <h2>Indicateur n°4:</h2>
+        <p> <strong>Enoncé</strong>: <em>Quelles sont les catégories de produit vendus par les fournisseurs Singapouriens ?</em></p>
+        <p>Les catégories de produits vendues par les fournisseurs Singapouriens sont les suivantes :
+        <ul class="list">
+            <li>Condiments</li>
+            <li>Boissons</li>
+        </ul>
+        <p>L'indicateur permet a Kdou que ce soit pour Singapour ou même pour un autre pays de connaître la <strong>diversité de l'offre</strong> de ces fournisseurs  et pouvoir comparer entre les différents pays.</p>
+        <figure>
+            <figcaption>Résultat : </figcaption>
+            <img src="assets/images/result_indic4.png" alt="Image du resultat de la requête" height="70" width="600">
+        </figure>
+        <figure>
+            <figcaption>Code SQL généré : </figcaption>
+            <img src="assets/images/sql_indic4.png" alt="Image du code SQL généré" height="60" width="700">
+        </figure>
+    </section>
+</main>
+
+<footer>
+    <hr>
+    <p>Site internet développé et mis en ligne en 2024 par Hideur Samy, Dufour Isham, Minette Jim-Anderson & Keskas Loqman pour l'entreprise KDou.</p>
+    <p>Toute ressemblance avec une entreprise réelle serait purement fortuite.</p>
+    <p>Tous droits réservés.</p>
+</footer>
+
+</body>
+</html>

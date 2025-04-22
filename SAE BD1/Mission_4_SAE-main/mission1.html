@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Mission 1</title>
+  <link href="assets/css/mission1.css" rel="stylesheet">
+  <link rel="icon" href="/assets/images/iconeUP.png">
+</head>
+
+<body>
+<header>
+  <nav>
+    <ul class="navbar-list">
+      <li> <a href="index.html">Accueil</a></li>
+      <li> <a href="mission1.html">Mission 1</a></li>
+      <li> <a href="mission2.html">Mission 2</a></li>
+      <li> <a href="mission3.html">Mission 3</a></li>
+      <li><a href="conclusion.html">Conclusion</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <section class="introduction">
+    <h1>Mission 1 : Conception – Interrogation d’une base de données</h1>
+    <p>Pour cette <strong>première</strong> mission, l’objectif était de se familiariser avec les outils et données que l’on possède.</p>
+    <p>Avant le début de toute manipulation de données, nous devions en premier lieu découvrir la base de données de <strong>Kdou</strong> ainsi que le <mark>Query By Example (QBE)</mark> dans Microsoft Access
+      qui nous permet de manipuler les données présentes dans la base.</p>
+    <p>Pour se faire, nous avons constitué différentes requêtes plus ou moins complexes permettant de faire le lien entre les différentes tables constituant la base de données de Kdou.</p>
+  </section>
+
+  <section class="requete-une-table">
+    <h2>Après avoir localisé les clés primaires et les potentielles clés étrangères de chaque table, nous avons d’abord effectué des requêtes nécessitant une seule table :</h2>
+    <ol class = "list">
+      <li>Obtenir le nombre de client ou de fournisseur se trouvant dans différentes régions du monde ou de la France (clients nantais, fournisseur nord-américains...).</li>
+      <li>Obtenir des adresse de fournisseurs.</li>
+      <li>Obtenir les différentes fonctions des fournisseurs, voir image ci-dessous : </li>
+    </ol>
+  <figure>
+    <img src = "assets/images/fonctions_fournisseurs.png"
+         alt = "Capture d'écran Access du résultat obtenu pour la requête c de la liste."
+         width = "650"
+         height = "200">
+    <figcaption> <em>Extrait du résultat obtenu pour la requête c de la liste. </em></figcaption>
+  </figure>
+    <p>Cependant, lors de la manipulation des données, nous nous sommes rendus comptes qu’il y avait certaines incohérences dans la base de données, ce qui pourrait fausser nos résultats.</p>
+    <p>Nous pouvons citer la présence de doublons tels que S<strong>a</strong>o Paulo et S<strong>ã</strong>o Paulo qui étaient considérées comme deux villes différentes. Il y avait aussi et surtout de nombreuses fautes d’orthographe, rendant la recherche par nom de client très laborieuse.</p>
+  </section>
+
+  <section class="requete-diff-tables">
+    <h2>Après cela, nous avons effectué des requêtes nécessitant les données présentes dans différentes tables. L’objectif étant de s’approprier la notion et le fonctionnement de la jointure :</h2>
+    <ul class="list">
+      <li>Obtenir les informations de produits commandés par un certain client.</li>
+      <li>Obtenir l’offre de produits suédois.</li>
+      <li>Obtenir les catégories de produits vendus par des fournisseurs de différentes nationalités.</li>
+    </ul>
+    <figure>
+      <img src = "assets/images/categ_produits_fournisseur.png"
+           alt = "Capture d'écran Access du résultat obtenu pour la première requête de la liste"
+           width = "650"
+           height= "250" >
+      <figcaption> <em>Extrait du résultat obtenu pour la première requête de la liste. </em></figcaption>
+    </figure>
+
+  </section>
+
+<section class="conclusion">
+  <h2>Afin d’éviter ce genre de soucis, nous avons proposé ces améliorations :</h2>
+  <ol class="list">
+    <li>Imposer une unique syntaxe pour les pays qui pourraient être écrits tout en majuscule et sans accent par exemple.</li>
+    <li>Imposer une limite minimale de 0 pour exprimer l’absence d’un produit dans le stock dans l’onglet produit car il y a des enregistrements sans valeur portant ainsi confusion.</li>
+    <li>Vérifier les codes clients dans la feuille des détails de commandes pour empêcher les soucis de gestion de commandes.</li>
+  </ol>
+  <p>En conclusion, cette première mission avait pour objectif principal de nous faire <strong>découvrir les bases de données</strong> et la manipulation de celles-ci. De plus, les différentes requêtes saisies nous ont permis de nous rendre compte que l’utilisation de QBE est assez <strong>limitée</strong>.</p>
+  <p>Cet outil est utile pour la prise en main mais sera vite obsolète lorsque nous souhaiterons saisir des requêtes beaucoup plus complexes dans les missions suivantes. D’où l’intérêt d'utiliser le langage <strong>SQL</strong>.</p>
+</section>
+</main>
+
+<footer>
+  <hr>
+  <p>Site internet développé et mis en ligne en 2024 par Hideur Samy, Dufour Isham, Minette Jim-Anderson & Keskas Loqman pour l'entreprise KDou.</p>
+  <p>Toute ressemblance avec une entreprise réelle serait purement fortuite.</p>
+  <p>Tous droits réservés.</p>
+</footer>
+</body>
+</html>

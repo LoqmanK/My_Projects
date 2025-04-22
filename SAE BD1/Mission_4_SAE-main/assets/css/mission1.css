@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Host+Grotesk:ital,wght@0,300..800;1,300..800&display=swap'); /* On importe la police Host Grotesk */
+
+:root {
+    --background-color : #DAD7CD;
+    --nav-bar-color : #344E41;
+    --nav-bar-hover : #2e453a;
+    --vert-clair : #A3B18A;
+    --vert: #588157;
+    --vert-fonce : #3A5A40;
+}
+
+body {
+    margin: 0;
+    padding: 4em 0 0 0;
+    background-color: var(--background-color);
+    font-family: "Host Grotesk", sans-serif;
+}
+
+nav {
+    position: fixed; /*La barre de navigation est bien fixée*/
+    width: 100%;
+    top : 0;
+    background-color: var(--nav-bar-color);
+    height: 8%;
+}
+
+nav > ul.navbar-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+ul.navbar-list > li {
+    height: 8vh;
+    width: 10em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+ul.navbar-list > li:hover {
+    background-color: var(--nav-bar-hover);
+}
+
+ul.navbar-list > li > a {
+    font-size: 1.5em;
+    text-decoration: none;
+    color: var(--background-color);
+}
+
+.introduction h1 {
+    display: flex;
+    justify-content: center; /*Avec le système de flexbox cela nous permet de centrer notre titre de page h1 dans cet exemple.*/
+    font-size: 1.5em;
+}
+
+h2 {
+    font-size: 1.25em;
+    font-weight: normal;
+    text-decoration: underline;
+    margin: 1em;
+}
+
+p {
+    margin: 1em;
+    font-size: 1.2em;
+}
+
+mark {
+    background-color: var(--vert-clair );
+}
+
+.list {
+    font-size: 1.1em;
+}
+
+.list ol {
+    list-style-type: lower-alpha;
+}
+
+figure {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+figcaption {
+    padding-top: 1em; /* Petit espace entre mes images et le petit texte qui la décrit.*/
+}
+
+section h2:first-of-type, h1 { /*On selectionne la premiere occurence de la balise h2 de classe section, et tous les h1.*/
+    text-decoration: underline;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+ol, ul {
+    margin: 0;
+}
+
+
+
