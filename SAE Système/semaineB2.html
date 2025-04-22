@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Semaine S1-B2</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="assets/css/semaineB2.css">
+</head>
+<body>
+<header>
+  <nav class="navbar navbar-expand-lg fixed-top bg-body-tertiary" data-bs-theme="dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">SAÉ S1.03</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-link active" aria-current="page" href="index.html">Accueil</a>
+          <a class="nav-link active" href="semaineB2.html">Semaine S1-B2</a>
+          <a class="nav-link active" href="semaineB3.html">Semaine S1-B3</a>
+          <a class="nav-link active"  href="semaineB4.html">Semaine S1-B4</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<main>
+  <section class="introduction">
+    <h1>Semaine S1-B2</h1>
+  </section>
+
+  <section class="explications">
+    <h2>1. Virtualisation et choix de l'outil de virtualisation</h2>
+    <p>Avant de justifier et de présenter notre choix de l'outil de virtualisation, il nous semble primordial de définir ce qu'est la <strong>virtualisation</strong>.</p>
+    <section class="definition">
+      <h5>A. La virtualisation? Kézako?</h5>
+      <p>La virtualisation consiste à faire fonctionner un ou plusieurs systèmes d'exploitation (ou applications complexes) comme un simple logiciel, sur un (ou plusieurs) système d’exploitation fonctionnant sur ordinateur (ou serveur), au lieu de ne pouvoir en installer qu'un seul par machine.
+        Ces ordinateurs virtuels sont appelés <i>Virtual Environment</i> ou VE. </p>
+      <p>Naturellement, il est humain de se demander alors quelle est la différence entre un émulateur, un simulateur et un outil de virtualisation ?</p>
+    </section>
+    <section class="difference">
+      <h5>B. Les différences entre émulateur, simulateur et outil de virtualisation.</h5>
+      <table>
+        <thead>
+        <tr>
+          <th>Critères</th>
+          <th>Émulateur</th>
+          <th>Simulateur</th>
+          <th>Outil de virtualisation</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+          <td><strong>Définition.</strong></td>
+          <td> Reproduit le matériel et le logiciel d'un autre système.</td>
+          <td>Imite le comportement d'un système/environnement.</td>
+          <td>Exécute un ou plusieurs systèmes d'exploitation sur une même machine.</td>
+        </tr>
+        <tr>
+          <td><strong>Précision.</strong></td>
+          <td> Très précis (matériel + logiciel.</td>
+          <td>Moins précis, imite le comportement logiciel seulement.</td>
+          <td>Proche du matériel réel grâce à l'hyperviseur.</td>
+        </tr>
+        <tr>
+          <td><strong>Performance.</strong></td>
+          <td> Plus lent car il imite le matériel</td>
+          <td>Rapide car simule uniquement le logiciel.</td>
+          <td>Performances élevées si la virtualisation du matériel est activée.</td>
+        </tr>
+        <tr>
+          <td><strong>Exemples.</strong></td>
+          <td> QEMU, Bluestacks, Dolphin.</td>
+          <td>Simulateurs Android ou iOS.</td>
+          <td>VMware, VirtualBox.</td>
+        </tr>
+        </tbody>
+      </table>
+
+      <p>Dans le cadre de cette SAÉ il nous a été demandé de créer une machine virtuelle de type <strong>Linux</strong> en utilisant au choix :</p>
+      <ul>
+        <li>VirtualBox</li>
+        <li>VMware</li>
+        <li>Stratus</li>
+      </ul>
+      <p>Dans un soucis d'explication de chacun de nos choix et avant même d'expliquer quel outil nous avons préféré utiliser, il nous paraît important de préciser le <strong>type de virtualisation </strong>pour chacun de ces outils.</p>
+      <section class="type-virtualisation">
+        <h5>C. Types de virtualisation</h5>
+        <p>Voici un rappel des différents types de virtualisation :</p>
+        <ul>
+          <li><strong>Type 1 :</strong> La machine virtuelle émule directement la nouvelle machine sur le système d’exploitation hôte, avec les mêmes configurations techniques. </li>
+          <li><strong>Type 2 :</strong> La machine émule la machine sur un système d’exploitation différent, elle est basée sur un hôte.</li>
+        </ul>
+        <p>Concernant ces environnements, Stratus est de <strong>type 1 </strong>tandis que VirtualBox et VmWare Workstation sont de <strong>type 2.</strong> </p>
+      </section>
+
+      <section class="choix-outil">
+        <h5>D. Notre choix de l'outil de virtualisation.</h5>
+        <p>Nous avons choisi d'utiliser <strong>VirtualBox</strong> en tant qu'outil de virtualisation pour les raisons suivantes : </p>
+        <ul>
+          <li>VirtualBox est gratuit et <strong>open-source.</strong></li>
+          <li>VirtualBox prend en charge de nombreux systèmes d'exploitation invités.</li>
+          <li>L'interface utilisateur de VirtualBox simple et <strong>intuitive.</strong></li>
+          <li>Il y a une large communauté autour de VirtualBox, avec de nombreuses ressources (forums, tutoriels, plugins) pour résoudre les problèmes <strong>rapidement.</strong></li>
+          <li>VirtualBox est <strong>léger</strong>, facile à configurer et consomme moins de ressources matérielles.</li>
+        </ul>
+        <p>Suite à cela, nous avons donc créé notre machine virtuelle Linux en utilisant VirtualBox. Nous vous invitons à cliquer sur la rubrique suivante pour en connaitre les détails !</p>
+
+
+      </section>
+
+    </section>
+
+  </section>
+</main>
+
+<footer>
+  <hr>
+  <p>Site internet développé et mis en ligne en 2024 par Hideur Samy, Minette Jim-Anderson & Keskas Loqman.</p>
+  <p>Tous droits réservés.</p>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>

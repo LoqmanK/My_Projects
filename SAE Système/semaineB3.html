@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Semaine S1-B3</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="assets/css/semaineB3.css" >
+</head>
+<body>
+<header>
+  <nav class="navbar navbar-expand-lg fixed-top bg-body-tertiary" data-bs-theme="dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">SAÉ S1.03</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-link active" aria-current="page" href="index.html">Accueil</a>
+          <a class="nav-link active" href="semaineB2.html">Semaine S1-B2</a>
+          <a class="nav-link active" href="semaineB3.html">Semaine S1-B3</a>
+          <a class="nav-link active"  href="semaineB4.html">Semaine S1-B4</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<main>
+  <section class="introduction">
+    <h1>Semaine S1-B3</h1>
+  </section>
+
+  <section class="creation">
+    <h2>1. Création de la machine virtuelle.</h2>
+    <p>Voici quelques captures d'écran de la configuration de notre machine virtuelle : </p>
+    <figure>
+      <img src="assets/img/creation-1.png" alt="capture d'écran du hardware alloué" width="500" height="110">
+      <figcaption>Capture d'écran de la mémoire vive et du nombre de coeurs alloués.</figcaption>
+    </figure>
+    <figure>
+      <img src="assets/img/creation-2.png" alt="capture d'écran du stockage alloué" width="500" height="300">
+      <figcaption>Capture d'écran du stockage alloué.</figcaption>
+    </figure>
+    <p>Nous n'avons pas modifié les options car nous croyons que les paramètres de base proposés par VirtualBox sont suffisants. Les systèmes Linux ne sont pas gourmands en performance.</p>
+    <p>Nous avons par ailleurs décidé d'installer le système d'exploitation <strong>Ubuntu :</strong></p>
+    <ul>
+      <li>Le système d'exploitation est <strong>gratuit.</strong></li>
+      <li>L'installation est <strong>extrêmement simple.</strong></li>
+      <li>L'interface graphique permet de prendre en main <strong>très facilement</strong> le système en cas de besoin.</li>
+      <li>Nous avions déjà dans le passé, dans un but récréatif, <strong>utilisé</strong> cet OS.</li>
+    </ul>
+    <h5>Où avons-nous, et sous quelle forme stocké la sauvegarde de la machine virtuelle créée?</h5>
+    <p>Notre machine virtuelle ayant été créée avec VirtualBox est sauvegardée sous forme de <strong>fichiers</strong> (disques virtuels, fichiers de configuration) dans des répertoires <strong>dédiés</strong> à chaque utilisateur. </p>
+  </section>
+
+  <section class="compte-admin">
+    <h2>2. Création d'un compte administrateur.</h2>
+    <p>Une fois la machine virtuelle prête à l’emploi, nous avons créé notre compte <strong>administrateur :</strong></p>
+
+    <figure>
+      <img src="assets/img/admin1.png" alt="Capture d'écran du terminal sous Ubuntu" height="300" width="500">
+      <figcaption>Capture d'écran du terminal sous Ubuntu.</figcaption>
+    </figure>
+
+    <figure>
+      <img src="assets/img/admin2.png" alt="Capture d'écran de la commande sous Ubuntu" height="300" width="500">
+      <figcaption>Capture d'écran de la commande permettant de créer un compte.</figcaption>
+    </figure>
+    <p>Voici les commandes décortiquées :</p>
+    <ul>
+      <li><i>sudo</i> permet d'exécuter la commande avec des privilèges administrateur, nécessaires pour gérer les utilisateurs.</li>
+      <li><i>useradd</i> est la commande utilisée pour ajouter un utilisateur sur le système.</li>
+      <li><i>-m</i> indique que le répertoire personnel de l'utilisateur doit être automatiquement créé. Par exemple, si l'utilisateur s'appelle alice, un dossier /home/alice sera créé.</li>
+      <li><i>-s</i> permet de spécifier le shell par défaut que l'utilisateur utilisera après connexion.</li>
+    </ul>
+
+    <p>La création du compte administrateur s’est faite grâce à la commande sudo <i>SuperUser DO</i>, qui est une commande qui nous sera utile tout le long de notre installation du poste de développement. Cette commande permet d'exécuter des actions qui nécessitent des autorisations administratives, comme l'installation de logiciels, la modification des fichiers système ou la gestion des utilisateurs. </p>
+    <p>Puis nous avons fait de cet utilisateur un administrateur en l’ajoutant au groupe <strong>sudo</strong> afin qu’il puisse avoir accès aux privilèges d’administration.</p>
+
+    <figure>
+      <img src="assets/img/admin3.png" alt="Capture d'écran de la commande sous Ubuntu" height="300" width="500">
+      <figcaption>Capture d'écran de la commande permettant de donner le privilège admin.</figcaption>
+    </figure>
+    <p>Voici les commandes décortiquées :</p>
+    <ul>
+      <li><i>usermod</i> permet de modifier un utilisateur existant (changer ses paramètres, ses groupes, son shell, etc.).</li>
+      <li><i>-a</i> ajoute l'utilisateur aux groupes spécifiés sans retirer cet utilisateur des groupes auxquels il appartient déjà.</li>
+      <li><i>-G</i> Spécifie les groupes secondaires auxquels l'utilisateur doit être ajouté. </li>
+    </ul>
+  </section>
+
+  <section class="binome">
+    <h2>3. Création de deux utilisateurs binômes.</h2>
+    <p>Pour ajouter les deux autres utilisateurs nous avons simplement réutilisés la commande vue précedemment :</p>
+    <figure>
+      <img src="assets/img/binome1.png" alt="Capture d'écran de la commande sous Ubuntu" height="300" width="500">
+      <figcaption>Capture d'écran de la commande permettant de créer deux nouveaux utilisateurs.</figcaption>
+    </figure>
+    <p>Puis nous avons créés un groupe :</p>
+    <figure>
+      <img src="assets/img/binome2.png" alt="Capture d'écran de la commande sous Ubuntu" height="300" width="500">
+      <figcaption>Capture d'écran de la commande permettant de créer un groupe.</figcaption>
+    </figure>
+  </section>
+
+  <section class="prompt">
+    <h2>4. Personnalisation d'une invite de commande.</h2>
+    <p>Pour que cela fonctionne, il a fallu modifier la variable <strong>PS1</strong>, ce que nous avons fait :</p>
+    <figure>
+      <img src="assets/img/prompt1.png" alt="Capture d'écran de la commande sous Ubuntu" height="300" width="500">
+      <figcaption>Capture d'écran de la commande permettant de créer un prompt personnalisé.</figcaption>
+    </figure>
+
+    <figure>
+      <img src="assets/img/prompt2.png" alt="Capture d'écran de la commande sous Ubuntu" height="300" width="500">
+      <figcaption>Capture d'écran de la commande affichant le prompt personnalisé.</figcaption>
+    </figure>
+  </section>
+
+  <section class="conclusion">
+    <h5>La prochaine étape sera maintenant de configurer le serveur web !</h5>
+    <img src="assets/img/helldivers-automaton.gif" alt="Robot qui tape sur le clavier de son ordinateur.">
+  </section>
+
+</main>
+
+
+<footer>
+  <hr>
+  <p>Site internet développé et mis en ligne en 2024 par Hideur Samy, Minette Jim-Anderson & Keskas Loqman.</p>
+  <p>Tous droits réservés.</p>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Semaine S1-B4</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="assets/css/semaineb4.css" >
+</head>
+<body>
+
+<header>
+  <nav class="navbar navbar-expand-lg fixed-top bg-body-tertiary" data-bs-theme="dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">SAÉ S1.03</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-link active" aria-current="page" href="index.html">Accueil</a>
+          <a class="nav-link active" href="semaineB2.html">Semaine S1-B2</a>
+          <a class="nav-link active" href="semaineB3.html">Semaine S1-B3</a>
+          <a class="nav-link active"  href="semaineB4.html">Semaine S1-B4</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<main>
+  <section class="introduction">
+    <h1>Semaine S1-B4</h1>
+  </section>
+
+  <section class="serveur-web">
+    <h2>1. Installation d'un service web.</h2>
+    <p>Pour pouvoir installer notre poste de développement, il faut créer au préalable un <strong>serveur</strong> qui hébergera notre site. </p>
+    <h5>Mais, lequel ?</h5>
+    <p>Nous avons fait le choix d’installer un serveur web <strong>Apache</strong>, un logiciel libre qui permet de diffuser des pages web sur Internet. Pourquoi ? :</p>
+    <ul>
+      <li>Apache a une <strong>grande communauté</strong> et une documentation très détaillée et large.</li>
+      <li>Apache est un logiciel <strong>libre.</strong></li>
+      <li>Son support est <strong>étendu</strong> sur différents systèmes d'exploitation.</li>
+    </ul>
+    <p>Voici une capture d'écran de son installation : </p>
+    <figure>
+      <img src="assets/img/apache1.png" alt="Capture d'écran de la commande sous Ubuntu" height="300" width="500">
+      <figcaption>Installation d'Apache.</figcaption>
+    </figure>
+
+    <p>Nous avons ensuite déterminé <strong>l'adresse IP</strong> que l'on peut utiliser dans la configuration d'Apache :</p>
+    <figure>
+      <img src="assets/img/apache2.png" alt="Capture d'écran de la commande sous Ubuntu" height="300" width="500">
+      <figcaption>On détermine l'adresse IP.</figcaption>
+    </figure>
+    <p>Voici les commandes décortiquées :</p>
+    <ul>
+      <li><i>ip</i> permet de gérer les interfaces réseau et les configurations réseau sous Linux.</li>
+      <li><i>-c</i> active la coloration de la sortie pour rendre les informations plus lisibles dans le terminal</li>
+      <li><i>addr</i> affiche des détails sur les interfaces réseau disponibles, les adresses IP assignées et les états des interfaces. </li>
+    </ul>
+    <p>En tapant l'adresse IP sur un navigateur on tombe bien sur une <strong>page de configuration</strong> Apache.</p>
+    <figure>
+      <img src="assets/img/apache3.png" alt="Capture d'écran de la commande sous Ubuntu" height="300" width="500">
+      <figcaption>Page de configuration Apache.</figcaption>
+    </figure>
+  </section>
+
+  <section class="configuration">
+    <h2>2. Configuration d'Apache</h2>
+    <p>Nous allons ensuite créer un <strong>répertoire</strong> pour héberger les fichiers de notre site web : </p>
+    <figure>
+      <img src="assets/img/apache4.png" alt="Capture d'écran de la commande sous Ubuntu" height="300" width="500">
+      <figcaption>Création du répertoire.</figcaption>
+    </figure>
+
+    <p>Suite à cela nous avons changé le <strong>répertoire racine </strong>en ouvrant le fichier <i>000-default.conf</i> en mode <strong>édition : </strong></p>
+    <figure>
+      <img src="assets/img/apache5.png" alt="Capture d'écran de la commande sous Ubuntu" height="300" width="500">
+      <figcaption>Changement du répertoire racine.</figcaption>
+    </figure>
+
+    <figure>
+      <img src="assets/img/apache6.png" alt="Capture d'écran de la commande sous Ubuntu" height="300" width="500">
+      <figcaption>Modification du répertoire racine.</figcaption>
+    </figure>
+
+    <h5>Est-ce que ça suffit comme cela ?</h5>
+    <p><strong>Non</strong>, il nous faut maintenant modifier le fichier <i>apache2.conf</i> qui est le fichier de configuration principal d'Apache : </p>
+
+    <figure>
+      <img src="assets/img/apache7.png" alt="Capture d'écran de la commande sous Ubuntu" height="300" width="500">
+      <figcaption>Modification du répertoire.</figcaption>
+    </figure>
+
+    <p>Suite aux changements, le site n'est plus accessible : </p>
+    <figure>
+      <img src="assets/img/apache8.png" alt="Capture d'écran de la commande sous Ubuntu" height="300" width="500">
+      <figcaption>Site indisponible.</figcaption>
+    </figure>
+
+    <p>Pour résoudre cela, nous avons pu déterminer qu'il s'agissait d'une histoire de <strong>droits</strong> que nous avons réglés par la commande suivante : </p>
+    <figure>
+      <img src="assets/img/apache9.png" alt="Capture d'écran de la commande sous Ubuntu" height="300" width="500">
+      <figcaption>Modification des droits.</figcaption>
+    </figure>
+
+    <p>Après avoir fait cela, notre page web ressemble enfin au contenu du fichier créé !</p>
+    <p>Il est tout à fait possible, pour plus de praticité ensuite, de créer un lien symbolique pour obtenir le contenu de la page.</p>
+  </section>
+
+  <section class="webstom">
+    <h2>3. Configuration de Webstorm pour le déploiement.</h2>
+    <p>A partir de WebStorm, on déploie la machine virtuelle en indiquant son adresse IP, le nom de l'utilisateur et son mot de passe.</p>
+    <figure>
+      <img src="assets/img/wb1.png" alt="Capture d'écran de la page Webstorm" height="400" width="500">
+      <figcaption>Déploiement de la machine virtuelle.</figcaption>
+    </figure>
+
+    <p>On configure ensuite le bon mapping :</p>
+    <figure>
+      <img src="assets/img/wb2.png" alt="Capture d'écran de la page Webstorm" height="400" width="500">
+      <figcaption>Configuration du mapping.</figcaption>
+    </figure>
+    <p>On s'assure que tout va fonctionne bien en testant la connexion : </p>
+    <figure>
+      <img src="assets/img/wb3.png" alt="Capture d'écran de la page Webstorm" height="400" width="500">
+      <figcaption>Test de connexion.</figcaption>
+    </figure>
+    <p>Nous pouvons enfin uploader notre contenu !</p>
+    <figure>
+      <img src="assets/img/wb4.png" alt="Capture d'écran de la page Webstorm" height="350" width="600">
+      <figcaption>Upload du contenu.</figcaption>
+    </figure>
+  </section>
+
+  <section class="conclusion">
+    <h5>Le travail est réussi !</h5>
+    <img src="assets/img/hourra.gif" alt="Hourra!.">
+  </section>
+
+</main>
+
+
+<footer>
+  <hr>
+  <p>Site internet développé et mis en ligne en 2024 par Hideur Samy, Minette Jim-Anderson & Keskas Loqman.</p>
+  <p>Tous droits réservés.</p>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
